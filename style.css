@@ -166,7 +166,7 @@ textarea {
 	top: calc(100% + 25px);
 	left: -10px;
 	z-index: 2;
-	height: 0;
+	max-height: 0;
 	opacity: 0;
 	background: rgba(0, 0, 0, 0);
 	box-shadow: 0px 4px 24px rgba(29, 47, 91, 0.14);
@@ -183,7 +183,7 @@ textarea {
 .header__submenu--active {
 	padding: 24px 32px;
 	background: #fff;
-	height: auto;
+	max-height: 200px;
 	opacity: 1;
 }
 .header__submenu-title {
@@ -301,6 +301,7 @@ textarea {
 		position: relative;
 		top: revert;
 		left: revert;
+		align-items: center;
 		box-shadow: none;
 		opacity: 0;
 		transition: 0.5s ease-in;
@@ -325,7 +326,6 @@ textarea {
 	.header__submenu--active {
 		padding: 20px 0 0 0;
 		opacity: 1;
-		align-items: center;
 	}
 	.header__burger {
 		display: flex;
@@ -734,6 +734,7 @@ textarea {
 	.history__images {
 		position: relative;
 		bottom: 0;
+		gap: 9px;
 		-ms-grid-columns: 63px 63px 20px 27px 73px 13px 22px 108px;
 		grid-template-columns: 63px 63px 20px 27px 73px 13px 22px 108px;
 		-ms-grid-rows: 94px 4px 10px 28px 83px 87px;
@@ -1070,6 +1071,9 @@ textarea {
 	gap: 10px;
 	align-items: flex-start;
 }
+.business__slide-link:hover {
+	text-decoration: none;
+}
 .business__slide-link:hover .business__slide-wrapper::before {
 	opacity: 1;
 	transform: scale(2);
@@ -1098,7 +1102,7 @@ textarea {
 	background: #fa9397;
 	border-radius: 50%;
 	opacity: 0;
-	transition: opacity 0.7s ease-out;
+	transition: all 1.2s ease;
 }
 .business__slide-img {
 	border-radius: 24px;
@@ -1360,7 +1364,7 @@ textarea {
 	background: #fa9397;
 	border-radius: 50%;
 	opacity: 0;
-	transition: opacity 0.7s ease-out;
+	transition: all 1.2s ease-out;
 }
 .news__item-text {
 	font-family: 'Gilroy';
